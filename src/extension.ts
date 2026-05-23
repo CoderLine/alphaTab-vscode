@@ -1,13 +1,12 @@
 import path from 'node:path';
-import { setupPreview } from 'src/preview';
 import * as vscode from 'vscode';
-
 import {
     LanguageClient,
     type LanguageClientOptions,
     type ServerOptions,
     TransportKind
 } from 'vscode-languageclient/node';
+import { setupPreview } from './preview';
 
 let disposables: vscode.Disposable[] = [];
 

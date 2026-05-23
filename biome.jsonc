@@ -1,31 +1,72 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
-    "root": false,
-    "extends": "//",
+    "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
     "files": {
+        "maxSize": 5242880,
         "includes": [
             "*.ts",
+            "*.mts",
             "src/**",
             "test/**"
         ]
     },
     "formatter": {
-        "includes": [
-            "*.ts",
-            "src/**",
-            "test/**"
-        ]
+        "enabled": true,
+        "formatWithErrors": true,
+        "attributePosition": "auto",
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 120,
+        "lineEnding": "lf"
+    },
+    "assist": {
+        "actions": {
+            "source": {
+                "organizeImports": "on"
+            }
+        }
     },
     "linter": {
-        "includes": [
-            "*.ts",
-            "src/**",
-            "test/**"
-        ],
+        "enabled": true,
         "rules": {
+            "style": {
+                "useEnumInitializers": "error",
+                "noInferrableTypes": "off",
+                "noNonNullAssertion": "off",
+                "noParameterAssign": "off",
+                "useBlockStatements": {
+                    "options": {},
+                    "level": "error",
+                    "fix": "safe"
+                }
+            },
             "suspicious": {
+                "noExplicitAny": "off",
                 "noTemplateCurlyInString": "off"
+            },
+            "correctness": {
+                "noUnusedImports": {
+                    "options": {},
+                    "level": "error",
+                    "fix": "safe"
+                },
+                "noSwitchDeclarations": "off"
             }
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "arrowParentheses": "asNeeded",
+            "bracketSameLine": true,
+            "bracketSpacing": true,
+            "quoteProperties": "asNeeded",
+            "semicolons": "always",
+            "trailingCommas": "none",
+            "quoteStyle": "single"
+        }
+    },
+    "json": {
+        "formatter": {
+            "trailingCommas": "none"
         }
     }
 }

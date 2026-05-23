@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { LogLevel } from '@coderline/alphatab';
-import type { AlphaTexPreviewMessages, AlphaTexPreviewState } from 'src/preview/app';
 import * as vscode from 'vscode';
+import type { AlphaTexPreviewMessages, AlphaTexPreviewState } from './app';
 
 export function setupPreview(
     context: vscode.ExtensionContext,
