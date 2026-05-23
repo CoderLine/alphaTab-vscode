@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.vsix
+.vscode-test/
+
+# Generated at build time from @coderline/alphatab-language-server
+/language-configuration.json
+/syntaxes/
